@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HI, I'M NIKITA</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <div class="grain"></div>
+    <div class="aurora aurora-one"></div>
+    <div class="aurora aurora-two"></div>
+
+    <header class="topbar" aria-label="Главная навигация">
+      <nav class="nav-links">
+        <a href="#home">ABOUT</a>
+        <a href="#achievements">ACHIEVEMENTS</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#library">LIBRARY</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </header>
+
+    <section id="home" class="hero" aria-label="Главный экран портфолио Никиты">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">ОБО МНЕ</p>
+        <p class="description">
+          Привет всем, меня зовут Настенко Никита. Я обучаюсь в Амурском Педагогическом Колледже №3
+          на четвертом курсе по специальности «Информационные системы программирования».
+          Мои увлечения - компьютерные игры, вайб-кодинг, а также активное изучение
+          различных языков программирования.
+        </p>
+      </div>
+
+      <h1 class="hero-title reveal" aria-label="Hi, I'm Nikita">
+        <span>HI, I'M NIKITA</span>
+      </h1>
+
+      <div class="avatar-scene reveal" aria-label="Анимированная 3D голова">
+        <div class="avatar-float">
+          <div class="avatar" id="avatar">
+            <nikita-hero-avatar
+              class="hero-avatar-widget"
+              asset-path="assets/avatar3d/"
+              size="100%"
+            ></nikita-hero-avatar>
+          </div>
+        </div>
+      </div>
+
+      <a class="contact-button reveal" href="#contact" aria-label="Перейти к контактам">
+        CONTACT ME
+        <span class="button-glow"></span>
+      </a>
+    </section>
+
+    <section id="achievements" class="content-section section-achievements kinetic-section" aria-label="Мои достижения">
+      <div class="section-inner">
+        <div class="section-copy">
+          <p class="section-kicker">ДОСТИЖЕНИЯ</p>
+          <h2>Мои достижения</h2>
+          <ul class="impact-list">
+            <li>Обучаюсь на четвертом курсе по направлению информационных систем программирования.</li>
+            <li>Развиваю собственные веб-проекты и учусь доводить идеи до работающего результата.</li>
+            <li>Постоянно расширяю технический кругозор через практику, учебные задачи и эксперименты.</li>
+          </ul>
+        </div>
+
+        <div class="achievement-object section-object" aria-hidden="true">
+          <img class="medal-image" src="medal.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="content-section section-skills kinetic-section" aria-label="Мои навыки">
+      <div class="section-inner reverse">
+        <div class="section-copy">
+          <p class="section-kicker">НАВЫКИ</p>
+          <h2>Мои навыки</h2>
+          <div class="skill-grid" aria-label="Список навыков">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Базы данных</span>
+            <span>UI-разработка</span>
+            <span>Логика программ</span>
+          </div>
+        </div>
+
+        <div class="skills-object section-object" aria-hidden="true">
+          <img class="plashka-image" src="plashka.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="library" class="content-section library-section kinetic-section" aria-label="Библиотека проектов и документов">
+      <div class="library-inner">
+        <div class="library-head section-copy">
+          <p class="section-kicker">БИБЛИОТЕКА</p>
+          <h2>Мои материалы</h2>
+          <p class="section-text">
+            Нажми на нужную строку в чеке: сертификаты и грамоты откроются отдельной мини-страницей поверх сайта.
+          </p>
+        </div>
+
+        <div class="library-stage section-object">
+          <div class="receipt-library" aria-label="Чек библиотеки">
+            <img class="receipt-image" src="listik1.png" alt="Библиотека: сертификаты, грамоты и проекты" />
+            <button class="receipt-hotspot hotspot-certificates" type="button" data-materials="certificates">
+              Сертификаты и грамоты
+            </button>
+            <button class="receipt-hotspot hotspot-projects" type="button" data-materials="projects">
+              Проекты
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="content-section contact-section kinetic-section" aria-label="Контакты">
+      <div class="contact-inner">
+        <div class="section-copy">
+          <p class="section-kicker">КОНТАКТ</p>
+          <h2>Связаться со мной</h2>
+          <p class="section-text">
+            Заполни поля, и сообщение соберется в аккуратный запрос.
+          </p>
+        </div>
+
+        <div class="contact-console section-object">
+          <div class="console-bar" aria-hidden="true">
+            <span class="console-dot dot-red"></span>
+            <span class="console-dot dot-yellow"></span>
+            <span class="console-dot dot-green"></span>
+            <span class="console-title">Contact.json</span>
+            <span class="console-more">...</span>
+          </div>
+
+          <form class="contact-code-form" id="contactForm">
+            <div class="code-line"><span>1</span><b>{</b></div>
+            <label class="code-field">
+              <span class="line-number">2</span>
+              <span class="json-key">"email"</span><span class="json-mark">:</span>
+              <input type="email" name="email" placeholder="your@email.com" autocomplete="email" required />
+              <span class="json-mark">,</span>
+            </label>
+            <label class="code-field">
+              <span class="line-number">3</span>
+              <span class="json-key">"name"</span><span class="json-mark">:</span>
+              <input type="text" name="name" placeholder="Ваше имя" autocomplete="name" required />
+              <span class="json-mark">,</span>
+            </label>
+            <label class="code-field question-field">
+              <span class="line-number">4</span>
+              <span class="json-key">"question"</span><span class="json-mark">:</span>
+              <textarea name="question" placeholder="Ваш вопрос" rows="3" required></textarea>
+            </label>
+            <div class="code-line"><span>5</span><b>}</b></div>
+
+            <button class="console-submit" type="submit">Отправить вопрос</button>
+          </form>
+
+          <div class="social-console" aria-label="Социальные сети">
+            <p>// social links</p>
+            <div class="social-links">
+              <a href="mailto:nikitanastenko30@gmail.com">Email</a>
+              <a href="#" target="_blank" rel="noreferrer">VK</a>
+              <a href="#" target="_blank" rel="noreferrer">Telegram</a>
+              <a href="https://github.com/m0ranje" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="materials-modal" id="materialsModal" aria-hidden="true">
+    <div class="materials-page" role="dialog" aria-modal="true" aria-labelledby="materialsTitle">
+      <button class="materials-close" type="button" aria-label="Закрыть раздел">×</button>
+      <p class="section-kicker" id="materialsKicker">БИБЛИОТЕКА</p>
+      <h2 id="materialsTitle">Сертификаты и грамоты</h2>
+      <p id="materialsText">Скриншоты сертификатов, грамот и дипломов.</p>
+      <div class="materials-tabs" id="materialsTabs" aria-label="Выбор курса"></div>
+      <div class="materials-grid" id="materialsGrid"></div>
+    </div>
+  </div>
+
+  <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Закрыть изображение">×</button>
+    <img id="lightboxImage" src="" alt="" />
+    <video id="lightboxVideo" controls playsinline></video>
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <script src="js/avatar-widget.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
